@@ -1,0 +1,264 @@
+.restored-services {
+  max-width: 1400px;
+  margin: 150px auto 0;
+  padding: 0 8.5vw;
+}
+.restored-services .section-head {
+  margin-bottom: 68px;
+}
+.restored-services .section-head h2 {
+  font-size: clamp(54px, 5vw, 82px);
+  line-height: 0.98;
+}
+.restored-services .service-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.restored-services .service-card {
+  min-height: 450px;
+  padding: 42px;
+}
+.restored-services .service-card h3 {
+  font-size: 36px;
+  margin-top: 66px;
+}
+.restored-services .service-card p {
+  font-size: 18px;
+  line-height: 1.55;
+  max-width: 100%;
+}
+.restored-services .service-bottom {
+  padding-top: 28px;
+}
+.restored-services .service-bottom strong {
+  font-size: 34px;
+}
+.restored-services .service-bottom button {
+  font-size: 15px;
+}
+.restored-team {
+  max-width: 1400px;
+  margin: 160px auto 0;
+  padding: 0 8.5vw;
+}
+.restored-team .section-head {
+  margin-bottom: 80px;
+}
+.restored-team .section-head h2 {
+  font-size: clamp(54px, 5vw, 82px);
+  line-height: 0.98;
+}
+.restored-team .team-intro {
+  font-size: 17px;
+  max-width: 290px;
+}
+.restored-team .barber-stage {
+  height: 560px;
+}
+.restored-team .barber-card {
+  left: 50%;
+  top: 0;
+  width: 350px;
+  height: 468px;
+  transform: translateX(-50%);
+}
+.restored-team .barber-card.left,
+.restored-team .barber-card.right {
+  opacity: 0;
+  pointer-events: none;
+}
+.restored-team .barber-card.center {
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.65);
+}
+@media (max-width: 800px) {
+  .restored-services,
+  .restored-team {
+    padding: 0 6vw;
+    margin-top: 100px;
+  }
+  .restored-services .service-grid {
+    grid-template-columns: 1fr;
+  }
+  .restored-services .service-card {
+    min-height: 360px;
+    padding: 28px;
+  }
+  .restored-services .service-card h3 {
+    font-size: 29px;
+    margin-top: 38px;
+  }
+  .restored-team .section-head {
+    display: block;
+  }
+  .restored-team .team-intro {
+    margin-top: 25px;
+  }
+  .restored-team .barber-card {
+    width: 280px;
+    height: 400px;
+  }
+}
+.restored-services .service-grid {
+  display: block;
+}
+.service-carousel {
+  height: 570px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  perspective: 1400px;
+  overflow: hidden;
+}
+.carousel-service {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 215px);
+  width: min(430px, 78vw);
+  height: 450px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.carousel-service.front {
+  border-color: #48402d;
+  box-shadow:
+    0 22px 65px rgba(0, 0, 0, 0.6),
+    0 0 35px rgba(215, 173, 88, 0.08);
+}
+.carousel-service .service-top {
+  font-size: 12px;
+}
+.carousel-service h3 {
+  margin-top: 74px !important;
+}
+.service-carousel-controls,
+.team-carousel-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transform: translateX(-50%);
+}
+.service-carousel-controls > button,
+.team-carousel-controls button {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #494949;
+  background: #121212;
+  color: #eee;
+  transition: 0.2s;
+}
+.service-carousel-controls > button:hover,
+.team-carousel-controls button:hover {
+  border-color: #d7ad58;
+  color: #d7ad58;
+}
+.service-carousel-controls > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.service-carousel-controls > div button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #555;
+  padding: 0;
+}
+.service-carousel-controls > div button.active {
+  background: #d7ad58;
+  box-shadow: 0 0 9px #d7ad58;
+}
+.restored-team .team-carousel {
+  height: 590px;
+  perspective: 1500px;
+}
+.restored-team .orbit {
+  width: 570px;
+  height: 190px;
+  bottom: 78px;
+  border-color: rgba(215, 173, 88, 0.38);
+  box-shadow: 0 0 20px rgba(215, 173, 88, 0.07);
+}
+.team-barber {
+  left: calc(50% - 175px);
+  top: 0;
+  width: 350px;
+  height: 468px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+.team-barber.front {
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.7),
+    0 0 28px rgba(215, 173, 88, 0.08);
+}
+.team-carousel-controls {
+  bottom: 4px;
+}
+.team-carousel-controls span {
+  font: 11px "DM Mono";
+  color: #ddd;
+}
+.team-carousel-controls i {
+  font-style: normal;
+  color: #777;
+}
+@media (max-width: 800px) {
+  .service-carousel {
+    height: 500px;
+  }
+  .carousel-service {
+    left: calc(50% - 165px);
+    width: min(330px, 76vw);
+    height: 400px;
+  }
+  .carousel-service h3 {
+    margin-top: 45px !important;
+  }
+  .carousel-service p {
+    font-size: 15px !important;
+  }
+  .restored-team .team-carousel {
+    height: 500px;
+  }
+  .team-barber {
+    left: calc(50% - 140px);
+    width: 280px;
+    height: 400px;
+  }
+  .restored-team .orbit {
+    width: 390px;
+    height: 130px;
+    bottom: 72px;
+  }
+}
+/* Keep the active barber centered; the base restored rule targets .barber-card. */
+.restored-team .team-barber {
+  left: calc(50% - 175px);
+}
+@media (max-width: 800px) {
+  .restored-team .team-barber {
+    left: calc(50% - 140px);
+  }
+}
+.restored-team .section-head {
+  display: block;
+}
+.restored-team .team-intro {
+  max-width: 620px;
+  margin: 28px 0 0;
+  line-height: 1.7;
+}
+#experience.manifesto {
+  display: block;
+}
+#experience .manifesto-copy {
+  max-width: 680px;
+  margin: 28px 0 0;
+}

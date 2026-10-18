@@ -1,0 +1,35 @@
+/* Landing-page footer: keep all footer content visible and readable on phones. */
+@media (max-width: 800px) {
+  footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    justify-content: stretch;
+    gap: 18px;
+    margin: 56px 5vw 0;
+    padding: 28px 0 32px;
+  }
+
+  footer p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+  }
+
+  footer .footer-links a {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  footer .footer-links {
+    gap: 4px 16px;
+  }
+}

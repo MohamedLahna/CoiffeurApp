@@ -1,0 +1,14 @@
+import React, { useEffect, useState } from 'react';
+import { Check, Save } from 'lucide-react';
+import { adminApi } from '../../services/api';
+import { useTranslation } from '../../i18n';
+
+const days=['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+export function ScheduleConfig(){
+  const {t}=useTranslation(); const [rows,setRows]=useState([]); const [barbers,setBarbers]=useState([]); const [selected,setSelected]=useState('all');
+  const load=()=>adminApi.schedules().then(({data})=>{setRows(data.schedules||data);setBarbers(data.barbers||[])}); useEffect(()=>{load()},[]);
+  const visible=rows.filter(r=>selected==='all'||String(r.barber_id)===String(selected)); const update=(id,key,value)=>setRows(current=>current.map(r=>r.id===id?{...r,[key]:value}:r));
+  const save=async(row)=>adminApi.updateSchedule(row.id,{start_time:row.start_time,end_time:row.end_time,break_start:row.break_start,break_end:row.break_end});
+  return <div className="space-y-6"><div className="flex flex-wrap items-end justify-between gap-4"><div><p className="font-mono text-[10px] tracking-[.18em] text-[#d7ad58]">{t('admin.operations')}</p><h2 className="mt-2 text-2xl">{t('admin.workingHoursTitle')}</h2></div><select value={selected} onChange={e=>setSelected(e.target.value)} className="border border-[#393939] bg-[#202020] px-4 py-3 text-sm text-white"><option value="all">{t('admin.allBarbers')}</option>{barbers.map(b=><option value={b.id} key={b.id}>{b.name}</option>)}</select></div>
+  <div className="overflow-x-auto border border-[#292929] bg-[#141414] p-5"><div className="mb-5 grid min-w-[700px] grid-cols-[1.1fr_repeat(4,1fr)_auto] gap-3 border-b border-[#292929] pb-3 text-[10px] uppercase tracking-wider text-[#777]">{['dayBarber','opening','closing','breakStart','breakEnd'].map(key=><span key={key}>{t(`admin.${key}`)}</span>)}<span/></div>{visible.map(row=><div className="grid min-w-[700px] grid-cols-[1.1fr_repeat(4,1fr)_auto] items-center gap-3 border-b border-[#242424] py-3 last:border-0" key={row.id}><div><p className="text-sm">{t(`admin.${days[row.day_of_week]}`)}</p><p className="text-xs text-[#777]">{row.barber?.name || `${t('admin.barber')} #${row.barber_id}`}</p></div>{['start_time','end_time','break_start','break_end'].map(key=><input aria-label={t(`admin.${key==='start_time'?'opening':key==='end_time'?'closing':key}`)} key={key} type="time" value={row[key]?.slice(0,5)||''} onChange={e=>update(row.id,key,e.target.value)} className="w-full border border-[#393939] bg-[#202020] p-2 text-xs text-white"/>)}<button onClick={()=>save(row)} className="grid h-8 w-8 place-items-center bg-[#d7ad58] text-[#19140b]" title={t('admin.save')}><Save size={14}/></button></div>)}{!visible.length&&<p className="p-8 text-center text-sm text-[#777]">{t('admin.noSchedules')}</p>}</div><div className="flex items-center gap-2 text-xs text-[#777]"><Check size={14} className="text-emerald-400"/>{t('admin.scheduleHint')}</div></div>
+}

@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "experience": "L’expérience",
+    "services": "Services",
+    "team": "L’équipe",
+    "journal": "Journal",
+    "book": "Réserver"
+  },
+  "hero": {
+    "badge": "BARBERING, REIMAGINED",
+    "title": "Le style est",
+    "accent": "un rituel.",
+    "subtitle": "Un espace où la précision rencontre le calme. Des coupes pensées pour vous, réalisées avec intention.",
+    "cta_book": "Réserver une chaise",
+    "cta_discover": "Découvrir l’atelier",
+    "rating": "sur 320+ expériences"
+  },
+  "manifesto": {
+    "eyebrow": "L’ATELIER NOIR",
+    "title": "Pas un salon.",
+    "accent": "Un standard.",
+    "body": "Nous croyons qu’une bonne coupe change plus que votre apparence. Elle change la façon dont vous entrez dans une pièce."
+  },
+  "services": {
+    "eyebrow": "LES ESSENTIELS",
+    "title": "Votre rituel,",
+    "accent": "à votre mesure.",
+    "signature": "Coupe sur mesure, consultation et finition au rasoir.",
+    "shave": "Serviette chaude, soin de la peau et rasage traditionnel.",
+    "beard": "L’expérience complète pour un style parfaitement équilibré.",
+    "book": "Réserver"
+  },
+  "team": {
+    "eyebrow": "LES MAINS DERRIÈRE LE MIROIR",
+    "title": "Rencontrez",
+    "accent": "l’équipe.",
+    "body": "Des artisans passionnés, obsédés par le geste juste."
+  },
+  "cta": {
+    "eyebrow": "PRÊT POUR LA SUITE ?",
+    "title": "Votre prochain",
+    "accent": "chapitre commence ici.",
+    "button": "Prendre rendez-vous"
+  },
+  "common": {
+    "back": "Retour",
+    "continue": "Continuer",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "logout": "Déconnexion",
+    "loading": "Chargement…"
+  },
+  "client": {
+    "loading": "Chargement de votre espace…",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "loginTitle": "Votre espace.",
+    "registerTitle": "Créer votre espace.",
+    "loginSubtitle": "Retrouvez vos rendez-vous et réservez votre prochain rituel.",
+    "registerSubtitle": "Inscrivez-vous pour réserver et suivre vos rendez-vous.",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "phone": "Téléphone",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "createAccount": "Créer mon compte",
+    "noAccount": "Je n’ai pas encore de compte",
+    "hasAccount": "J’ai déjà un compte",
+    "backToSite": "Retour au site",
+    "hello": "Bonjour",
+    "portalLabel": "ESPACE CLIENT",
+    "welcome": "Votre espace",
+    "book": "Réserver une chaise",
+    "appointments": "Mes rendez-vous",
+    "newBooking": "Nouvelle réservation",
+    "loadAppointmentsError": "Impossible de charger vos rendez-vous.",
+    "appointment": "Rendez-vous",
+    "pending": "En attente",
+    "confirmed": "Confirmé",
+    "cancelled": "Annulé",
+    "completed": "Terminé",
+    "cancel": "Annuler",
+    "emptyAppointments": "Aucun rendez-vous. Votre prochaine expérience commence ici.",
+    "loadBookingError": "Impossible de charger les services et les barbiers.",
+    "loadSlotsError": "Impossible de charger les créneaux disponibles.",
+    "service": "SERVICE",
+    "barber": "BARBIER",
+    "date": "DATE",
+    "time": "CRÉNEAU",
+    "minutes": "min",
+    "noSlots": "Aucun créneau disponible ce jour.",
+    "slotUnavailable": "Ce créneau n’est plus disponible. Choisissez-en un autre.",
+    "saving": "Enregistrement…",
+    "confirmBooking": "Confirmer la réservation",
+    "summary": "RÉCAPITULATIF",
+    "chooseService": "Choisissez un service",
+    "price": "Prix",
+    "duration": "Durée"
+  },
+  "admin": {
+    "overview": "Vue d’ensemble", "barbers": "Barbiers", "services": "Services & options", "appointments": "Rendez-vous", "schedules": "Horaires", "workspace": "ESPACE DE TRAVAIL", "controlCenter": "ATELIER NOIR / CENTRE DE CONTRÔLE", "administrator": "Administrateur", "backToSite": "Retour au site", "signOut": "Déconnexion", "signInTitle": "Connexion administrateur", "signInDescription": "Connectez-vous avec le compte Google autorisé.", "googleNotConfigured": "La connexion Google n’est pas configurée. Ajoutez VITE_GOOGLE_CLIENT_ID et GOOGLE_CLIENT_ID.", "authFailed": "Connexion refusée. Vérifiez que vous utilisez le compte Google autorisé.", "loading": "Vérification de l’accès…", "revenueToday": "Chiffre d’affaires aujourd’hui", "revenueMonth": "Chiffre d’affaires ce mois", "revenueYear": "Chiffre d’affaires annuel", "periodChange": "vs période précédente", "performance": "PERFORMANCE", "appointmentStatus": "Rendez-vous et statuts", "last30Days": "30 derniers jours", "total": "Total", "confirmed": "Confirmés", "pending": "En attente", "topServices": "SERVICES LES PLUS DEMANDÉS", "bookings": "réservations", "topBarbers": "MEILLEURS BARBIERS", "teamManagement": "GESTION DE L’ÉQUIPE", "newBarber": "Nouveau barbier", "active": "Actif", "inactive": "Inactif", "edit": "Modifier", "profile": "Profil du barbier", "fullName": "Nom complet", "email": "E-mail", "phone": "Téléphone", "photoUrl": "URL de la photo", "bio": "Biographie", "save": "Enregistrer", "workingHours": "Horaires", "catalogManagement": "GESTION DU CATALOGUE", "newService": "Nouveau service", "category": "Catégorie", "price": "Prix", "duration": "Durée (minutes)", "imageUrl": "URL de l’image", "description": "Description", "addons": "Options", "newAddon": "Nouvelle option", "add": "Ajouter", "deleteServiceConfirm": "Supprimer ce service ?", "bookingControl": "GESTION DES RÉSERVATIONS", "allAppointments": "Tous les rendez-vous", "filters": "Filtres", "allStatuses": "Tous les statuts", "cancelled": "Annulé", "completed": "Terminé", "reset": "Réinitialiser", "client": "Client", "barber": "Barbier", "dateTime": "Date et heure", "status": "Statut", "confirm": "Confirmer", "cancel": "Annuler", "emptyAppointments": "Aucun rendez-vous pour ces filtres.", "operations": "ORGANISATION", "workingHoursTitle": "Horaires de travail", "allBarbers": "Tous les barbiers", "dayBarber": "Jour / Barbier", "opening": "Ouverture", "closing": "Fermeture", "breakStart": "Début de pause", "breakEnd": "Fin de pause", "noSchedules": "Aucun horaire configuré.", "scheduleHint": "Les horaires enregistrés sont utilisés pour calculer les disponibilités.", "sunday": "Dimanche", "monday": "Lundi", "tuesday": "Mardi", "wednesday": "Mercredi", "thursday": "Jeudi", "friday": "Vendredi", "saturday": "Samedi"
+  }
+}
